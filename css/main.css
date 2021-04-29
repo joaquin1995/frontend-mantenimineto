@@ -850,3 +850,31 @@ html, body{
 .select2{
 	width: 100% !important;
 }
+
+
+.demo-list-three {
+	width: 650px;
+}
+
+
+.titulo{
+	font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 0;
+    line-height: 18px;
+    color: rgba(65, 62, 62, 0.54);
+    padding: 0;
+}
+
+.sub-titulo{
+	font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 0;
+    line-height: 18px;
+    color: rgba(0, 0, 0, 0.54);
+    padding: 0;
+}
+
+.mdl-button{
+	width: 100%;
+}
