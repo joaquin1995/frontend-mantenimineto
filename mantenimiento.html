@@ -7,22 +7,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Home</title>
+    <title>Inventory</title>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/sweetalert2.css">
     <link rel="stylesheet" href="css/material.min.css">
     <link rel="stylesheet" href="css/material-design-iconic-font.min.css">
     <link rel="stylesheet" href="css/jquery.mCustomScrollbar.css">
-    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
-
     <link rel="stylesheet" href="css/main.css">
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="js/jquery-1.11.2.min.js"><\/script>')</script>
+    <script>
+        window.jQuery || document.write('<script src="js/jquery-1.11.2.min.js"><\/script>')
+    </script>
     <script src="js/material.min.js"></script>
     <script src="js/sweetalert2.min.js"></script>
     <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
     <script src="js/main.js"></script>
-
+    
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.16.6/dist/sweetalert2.all.min.js"></script>
 </head>
 
@@ -315,194 +315,38 @@
     </section>
     <!-- pageContent -->
     <section class="full-width pageContent">
-        <section class="full-width text-center" style="padding: 40px 0;">
-            <h3 class="text-center tittles">SOLICITUD DE MANTENIMIENTO</h3>
-            <!-- Tiles -->
-
-
-
-
+        <section class="full-width header-well">
+            <!-- <div class="full-width header-well-icon">
+				<i class="zmdi zmdi-store"></i>
+			</div> -->
+            <div class="full-width header-well-text">
+                <h3>UNIDAD DE MANTENIMIENTO</h3>
+            </div>
         </section>
-        <div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
-
-            <div class="full-width panel-content">
-                <div class="mdl-tabs__panel is-active" id="tabNewCategory">
-                    <div class="mdl-grid">
-                        <div
-                            class="mdl-cell mdl-cell--4-col-phone mdl-cell--8-col-tablet mdl-cell--8-col-desktop mdl-cell--2-offset-desktop">
-                            <div class="full-width panel mdl-shadow--2dp">
-                                
-                                
-                                <select class="js-example-placeholder-single" id="id_label_single">
-                                    <option></option>
-                                </select>
-                               
-                                
-
-                              <br/>
-                                <div class="mdl-list">
-									<div class="mdl-list__item mdl-list__item--two-line">
-										<span class="mdl-list__item-primary-content">
-											<!-- <i class="zmdi zmdi-label mdl-list__item-avatar"></i> -->
-											<span class="titulo">DISTRITO: </span>
-											<span id="distrito" class="sub-titulo">S/N</span>
-										</span>
-										<a class="mdl-list__item-secondary-action" href="#!"><i class="zmdi zmdi-more"></i></a>
-									</div>
-									<li class="full-width divider-menu-h"></li>
-									<div class="mdl-list__item mdl-list__item--two-line">
-										<span class="mdl-list__item-primary-content">
-											<!-- <i class="zmdi zmdi-label mdl-list__item-avatar"></i> -->
-											<span class="titulo">UNIDAD VECINAL: </span>
-											<span class="sub-titulo" id="uv">S/N</span>
-										</span>
-										<a class="mdl-list__item-secondary-action" href="#!"><i class="zmdi zmdi-more"></i></a>
-									</div>
-									<li class="full-width divider-menu-h"></li>
-
-
-                                    <div class="mdl-list__item mdl-list__item--two-line">
-										<span class="mdl-list__item-primary-content">
-											<!-- <i class="zmdi zmdi-label mdl-list__item-avatar"></i> -->
-											<span class="titulo">UNIDAD EDUCATIVA: </span>
-											<span class="sub-titulo" id="colegio">S/N</span>
-										</span>
-										<a class="mdl-list__item-secondary-action" href="#!"><i class="zmdi zmdi-more"></i></a>
-									</div>
-                                    <li class="full-width divider-menu-h"></li>
-
-                                    <div class="mdl-list__item mdl-list__item--two-line">
-										<span class="mdl-list__item-primary-content">
-											<!-- <i class="zmdi zmdi-label mdl-list__item-avatar"></i> -->
-											<span class="titulo">DIRECCION: </span>
-											<span class="sub-titulo" id="direccion">S/N</span>
-										</span>
-										<a class="mdl-list__item-secondary-action" href="#!"><i class="zmdi zmdi-more"></i></a>
-									</div>
-                                    <li class="full-width divider-menu-h"></li>
-
-                                    <div class="mdl-list__item mdl-list__item--two-line">
-										<span class="mdl-list__item-primary-content">
-											<!-- <i class="zmdi zmdi-label mdl-list__item-avatar"></i> -->
-											<span class="titulo">NUMERO DE AULAS: </span>
-											<span class="sub-titulo" id="aulas">S/N</span>
-										</span>
-										<a class="mdl-list__item-secondary-action" href="#!"><i class="zmdi zmdi-more"></i></a>
-									</div>
-									<li class="full-width divider-menu-h"></li>
-
-                                    <div class="mdl-list__item mdl-list__item--two-line">
-										<span class="mdl-list__item-primary-content">
-											<!-- <i class="zmdi zmdi-label mdl-list__item-avatar"></i> -->
-											<span class="titulo">NIVEL: </span>
-											<span class="sub-titulo" id="nivel">S/N</span>
-										</span>
-										<a class="mdl-list__item-secondary-action" href="#!"><i class="zmdi zmdi-more"></i></a>
-									</div>
-									<li class="full-width divider-menu-h"></li>
-
-								</div>
-
-                            
-                        
-                                  
-                                    <select class="js-example-basic-multiple js-states form-control" id="id_label_multiple" multiple="multiple">
-                                       
-                                    </select>
-                                    <div class="mdl-list">
-                                        <div class="mdl-list__item mdl-list__item--two-line">
-                                            <span class="mdl-list__item-primary-content">
-                                                <!-- <i class="zmdi zmdi-label mdl-list__item-avatar"></i> -->
-                                                <span class="titulo">MONTO: </span>
-                                                <span class="sub-titulo" id="total">S/N</span>
-                                            </span>
-                                            <a class="mdl-list__item-secondary-action" href="#!"><i class="zmdi zmdi-more"></i></a>
-                                        </div>
-                                        <div class="mdl-list__item mdl-list__item--two-line">
-
-                                        <form action="#">
-                                            <div class="mdl-textfield mdl-js-textfield">
-                                              <textarea class="mdl-textfield__input" type="text" rows= "3" id="txtDescripcion" ></textarea>
-                                              <label class="mdl-textfield__label" for="sample5">DESCRIPCION...</label>
-                                            </div>
-                                          </form>
-                                          </div>
-                                    </div>
-                                  
-                                    <button id="enviar" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
-                                        ENVIAR SOLICITUD
-                                    </button>
-                                    <br/>
-                              
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
+        <div class="full-width divider-menu-h"></div>
+        <div class="mdl-grid">
+            <div class="mdl-cell mdl-cell--4-col-phone mdl-cell--8-col-tablet mdl-cell--12-col-desktop">
+                <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp full-width table-responsive">
+                    <thead>
+                        <tr>
+                            <th>Id</th>
+                            <th class="mdl-data-table__cell--non-numeric">Nombre</th>
+                            <th class="mdl-data-table__cell--non-numeric">Nivel</th>
+                            <th class="mdl-data-table__cell--non-numeric">Direccion</th>
+                            <th >Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tbody">
+           
+            
+                    </tbody>
+                </table>
             </div>
         </div>
-        </div>
-        <!-- <section class="full-width" style="margin: 30px 0;">
-			<h3 class="text-center tittles">RESPONSIVE TIMELINE</h3>
-
-			<div id="timeline-c" class="timeline-c">
-				<div class="timeline-c-box">
-	                <div class="timeline-c-box-icon bg-info">
-	                    <i class="zmdi zmdi-twitter"></i>
-	                </div>
-	                <div class="timeline-c-box-content">
-	                    <h4 class="text-center text-condensedLight">Tittle timeline</h4>
-	                    <p class="text-center">
-	                    	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta nobis rerum iure nostrum dolor. Quo totam possimus, ex, sapiente rerum vel maxime fugiat, ipsam blanditiis veniam, suscipit labore excepturi veritatis.
-	                    </p>
-	                    <span class="timeline-date"><i class="zmdi zmdi-calendar-note zmdi-hc-fw"></i>05-04-2016</span>
-	                </div>
-	            </div>
-				<div class="timeline-c-box">
-	                <div class="timeline-c-box-icon bg-success">
-	                    <i class="zmdi zmdi-whatsapp"></i>
-	                </div>
-	                <div class="timeline-c-box-content">
-	                    <h4 class="text-center text-condensedLight">Tittle timeline</h4>
-	                    <p class="text-center">
-	                    	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta nobis rerum iure nostrum dolor. Quo totam possimus, ex, sapiente rerum vel maxime fugiat, ipsam blanditiis veniam, suscipit labore excepturi veritatis.
-	                    </p>
-	                    <span class="timeline-date"><i class="zmdi zmdi-calendar-note zmdi-hc-fw"></i>06-04-2016</span>
-	                </div>
-	            </div>
-	            <div class="timeline-c-box">
-	                <div class="timeline-c-box-icon bg-primary">
-	                    <i class="zmdi zmdi-facebook"></i>
-	                </div>
-	                <div class="timeline-c-box-content">
-	                    <h4 class="text-center text-condensedLight">Tittle timeline</h4>
-	                    <p class="text-center">
-	                    	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta nobis rerum iure nostrum dolor. Quo totam possimus, ex, sapiente rerum vel maxime fugiat, ipsam blanditiis veniam, suscipit labore excepturi veritatis.
-	                    </p>
-	                    <span class="timeline-date"><i class="zmdi zmdi-calendar-note zmdi-hc-fw"></i>07-04-2016</span>
-	                </div>
-	            </div>
-	            <div class="timeline-c-box">
-	                <div class="timeline-c-box-icon bg-danger">
-	                    <i class="zmdi zmdi-youtube"></i>
-	                </div>
-	                <div class="timeline-c-box-content">
-	                    <h4 class="text-center text-condensedLight">Tittle timeline</h4>
-	                    <p class="text-center">
-	                    	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta nobis rerum iure nostrum dolor. Quo totam possimus, ex, sapiente rerum vel maxime fugiat, ipsam blanditiis veniam, suscipit labore excepturi veritatis.
-	                    </p>
-	                    <span class="timeline-date"><i class="zmdi zmdi-calendar-note zmdi-hc-fw"></i>08-04-2016</span>
-	                </div>
-	            </div>
-			</div>
-		</section> -->
     </section>
 
-
-    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
-    <script src="./js/select2.js"></script>
     <script src="./js/conexion/conexion.js"></script>
-    <script src="./js/mod1/app.js"></script>
+    <script src="./js/mod2/app.js"></script>
 </body>
 
 </html>

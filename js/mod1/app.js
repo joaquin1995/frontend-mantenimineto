@@ -12,7 +12,8 @@ const aulas = document.querySelector('#aulas');
 const nivel = document.querySelector('#nivel');
 const total = document.querySelector('#total');
 const enviar = document.querySelector('#enviar');
-
+const txtDescripcion = document.querySelector('#txtDescripcion');
+let jsonId = [];
 /* addEventListener */
 $('#id_label_single').on('change', function (e) {
   console.log(selectEducativas.value);
@@ -24,7 +25,7 @@ $('#id_label_single').on('change', function (e) {
 });
 
 $('#id_label_multiple').on('change', function (e) {
-    const jsonId = [];
+    jsonId = [];
     let cantidad = 0;
     var selected = $('#id_label_multiple').select2("data");
     for (var i = 0; i <= selected.length-1; i++) {
@@ -134,19 +135,62 @@ const enviarSolicitud = ()=>{
             text: 'SELECCIONE LA UNIDAD EDUCATIVA Y LOS TIPO DE MANTENIMIENTOS!',
           })
     }else{
-        Swal.fire({  
-            title: 'Do you want to save the changes?',  
-            showDenyButton: true,  showCancelButton: true,  
-            confirmButtonText: `Save`,  
-            denyButtonText: `Don't save`,
-          }).then((result) => {  
-              /* Read more about isConfirmed, isDenied below */  
-              if (result.isConfirmed) {    
-                  Swal.fire('Saved!', '', 'success')  
-              } else if (result.isDenied) {    
-                  Swal.fire('Changes are not saved', '', 'info')  
-               }
-          });
+        const json = josnSolicitud();
+        console.log(json);
+        insertar(json);
     }
+}
+
+
+const josnSolicitud = ()=>{
+    const date = new Date();
+    const fecha = date.getFullYear() + "-" + (date.getMonth() + 1) + "-" + date.getDate();
+    const hora = date.getHours() + ":" + date.getMinutes(); 
+    let json = {};
+    json.descripcion = txtDescripcion.value;
+    json.fecha = fecha;
+    json.hora = hora;
+    json.id_educativa  = selectEducativas.value;
+    json.id_mantenimiento = 1;
+    return json;
+};
+
+const insertar = async (json)=>{
+    let url = cnx.getUrl();
+    url += 'solicitud';
+    
+    try {
+        const res = await cnx.post(json,url);
+        console.log(res);
+        const id = res[0].id;
+        console.log('este',id);
+        let uri = cnx.getUrl();
+        uri += 'dt-solicitudes';
+        for (const x of jsonId) {
+            let dtJson = {};
+            dtJson.id_tipo_mantenimientos = x.id_tipo_mantenimientos;
+            dtJson.id_solicitud = id;
+            cnx.post(dtJson,uri);
+        }
+        alerta();
+        limpiar();
+        $("#id_label_multiple").val([]).change();
+        $("#id_label_single").val('').trigger('change');
+        jsonId = [];
+        total.value = "";
+        txtDescripcion.value = "";
+    } catch (error) {
+        console.log(error);
+    }
+}
+
+const alerta = ()=>{
+    Swal.fire({
+        position: 'top-end',
+        icon: 'success',
+        title: 'REGISTRADO CORRECTAMENTE',
+        showConfirmButton: false,
+        timer: 1500
+      })
 }
 
