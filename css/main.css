@@ -914,3 +914,43 @@ html, body{
 	background-color: #3f903f !important;
 }
 
+.centrado{
+	text-align: center !important;
+}
+
+.grid-padre{
+	display: grid;
+	grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+
+.titulo{
+	text-align: center;
+	grid-row: 1 / 2;
+}
+
+.informacion{
+	margin-top: -80px;
+	text-align: center;
+	grid-row: 2 /3;
+	
+}
+
+.fecha{
+	margin-top: -80px;
+	text-align: center;
+	grid-row: 3 /4;
+}
+
+.datos{
+	margin-top: -250px;
+	text-align: center;
+	grid-row: 4 / 5;
+	padding-right: 2rem;	
+	padding-left: 2rem;	
+	margin-bottom: 3rem;
+}
+
+
+
+
+

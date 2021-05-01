@@ -19,6 +19,8 @@
 	<script src="js/sweetalert2.min.js" ></script>
 	<script src="js/jquery.mCustomScrollbar.concat.min.js" ></script>
 	<script src="js/main.js" ></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.16.6/dist/sweetalert2.all.min.js"></script>
+
 </head>
 <body>
 	<!-- Notifications area -->
@@ -313,12 +315,53 @@
 				<i class="zmdi zmdi-store"></i>
 			</div> -->
 			<div class="full-width header-well-text">
-				<h3>PRESUPUESTO</h3>
+				<h3>PRESUPUESTO DETALLE</h3>
 			</div>
 		</section>
 		<div class="full-width divider-menu-h"></div>
-		<div class="mdl-grid">
-			<div class="mdl-cell mdl-cell--4-col-phone mdl-cell--8-col-tablet mdl-cell--12-col-desktop">
+		<div class="">
+            <div class="grid-padre">
+                <div class="titulo">
+                        <h5 id="presupuesto"> </h5>
+                        <div class="full-width divider-menu-h"></div>
+                </div>
+
+                <div class="informacion">
+                    <a>UNIDAD EDUCATIVA : </a> <span id="colegio">UNIDAD EDUCATIVA 1</span> <br/>
+                    <a>NIVEL : </a> <span id="nivel">SECUNDARIA</span> <br/>
+                    <a>DIRECCION : </a> <span id="dir">DIRECCION 1</span> <br/>
+                    <a>DISTRITO : </a> <span id="dis"> 1 </span> <br/>
+                    <a>UNIDAD VECINAL : </a> <span id="uv"> 145 </span> <br/>
+                    <div class="full-width divider-menu-h"></div>
+                </div>
+
+                <div class="fecha">
+                    <a>FECHA PRESUPUESTO: </a> <span id="fecha"></span>
+                </div>
+
+                <div class="datos">
+                    <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp full-width table-responsive">
+                        <thead>
+                            <tr>
+                                <th>Id</th>
+                                <th class="mdl-data-table__cell--non-numeric">Nombre</th>
+                                <th >Monto</th>
+                                
+                            </tr>
+                        </thead>
+                        <tbody id="tbody">
+                            <tr>
+                                <td>7</td>
+                                <td class="mdl-data-table__cell--non-numeric">Pintado general de paredes</td>
+                                <td >1800</td>
+
+                            </tr>
+                        
+                        </tbody>
+                    </table> 
+                </div>
+            </div>
+			<!-- <div class="mdl-cell mdl-cell--4-col-phone mdl-cell--8-col-tablet mdl-cell--12-col-desktop">
 				<table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp full-width table-responsive">
                     <thead>
                         <tr>
@@ -343,13 +386,13 @@
 						</tr>
 					
 					</tbody>
-				</table>
-			</div>
+				</table> -->
+			<!-- </div> -->
 		</div>
 	</section>
 
 	<script src="./js/conexion/conexion.js"></script>
-	<script src="./js/mod3/app.js"></script>
+	<script src="./js/mod4/app.js"></script>
 
 </body>
 </html>
